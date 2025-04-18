@@ -118,3 +118,29 @@
 <a onclick="openOverlay('chapters')">章节选择</a>
 <a onclick="openOverlay('about')">关于我们</a>
 </div>
+
+<!-- phone -->
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .overlay {
+    left: -320px;
+    width: 320px;
+  }
+
+  .overlay.show {
+    left: 200px;
+  }
+
+  .show-sidebar .cover {
+    transform: translateX(200px);
+  }
+
+  .show-sidebar #menuTrigger {
+    transform: translateX(200px);
+  }
+}
+
