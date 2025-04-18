@@ -1,0 +1,73 @@
+<!-- trigger 按钮 -->
+<button class="trigger" id="menuTrigger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  
+  <!-- 一级侧边栏 -->
+  <div class="sidebar" id="sidebar">
+    <a onclick="openOverlay('chapters')">章节选择</a>
+    <a onclick="openOverlay('about')">关于我们</a>
+  </div>
+  
+  <!-- 二级菜单 overlay -->
+  <div class="overlay" id="overlay">
+    <div id="chapters" class="content hidden">
+      <h3>章节选择</h3>
+  
+      <div class="section">
+        <strong onclick="toggleGroup('novel1')">母亲的情人</strong>
+        <div id="novel1" class="hidden">
+          <strong onclick="toggleGroup('novel1-1')">1-10章</strong>
+          <div id="novel1-1" class="hidden">
+            <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+          </div>
+          <strong onclick="toggleGroup('novel1-2')">11-20章</strong>
+          <div id="novel1-2" class="hidden">
+            <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a><a href="#">第14章</a><a href="#">第15章</a><a href="#">第16章</a><a href="#">第17章</a><a href="#">第18章</a><a href="#">第19章</a><a href="#">第20章</a>
+          </div>
+          <strong onclick="toggleGroup('novel1-3')">21-30章</strong>
+          <div id="novel1-3" class="hidden">
+            <a href="#">第21章</a><a href="#">第22章</a><a href="#">第23章</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <strong onclick="toggleGroup('novel2')">一个画家房客闯入我的农场生活</strong>
+        <div id="novel2" class="hidden">
+          <strong onclick="toggleGroup('novel2-1')">1-10章</strong>
+          <div id="novel2-1" class="hidden">
+            <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+          </div>
+          <strong onclick="toggleGroup('novel2-2')">11-20章</strong>
+          <div id="novel2-2" class="hidden">
+            <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a><a href="#">第14章</a><a href="#">第15章</a><a href="#">第16章</a><a href="#">第17章</a><a href="#">第18章</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <strong onclick="toggleGroup('novel3')">三人关系（施工中）</strong>
+        <div id="novel3" class="hidden">
+          <strong onclick="toggleGroup('novel3-1')">1-10章</strong>
+          <div id="novel3-1" class="hidden">
+            <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+          </div>
+          <strong onclick="toggleGroup('novel3-2')">11-20章</strong>
+          <div id="novel3-2" class="hidden">
+            <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="about" class="content hidden">
+      <h3>关于我们</h3>
+      <p>邮箱：<br>
+        <a href="mailto:archivexxoo@gmail.com" style="color: aqua;">skinarchivexxoo@gmail.com</a></p>
+      <p>源代码GitHub：<br>
+        <a href="https://github.com/Oliver-XXOObest/skinarchive" target="_blank" style="color: aqua;">https://github.com/Oliver-XXOObest/skinarchive</a></p>
+      <p>Discord群组：<br>
+        <a href="https://discord.gg/ESmPzp4kyB" target="_blank" style="color: aqua;">https://discord.gg/ESmPzp4kyB</a></p>
+    </div>
+  </div>
