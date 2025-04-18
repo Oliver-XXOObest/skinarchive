@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>skinarchive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- style CSS -->
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffead5;
+      font-family: serif;
+      overflow-x: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .cover {
+      padding: 6em 3em;
+      transition: transform 0.4s ease;
+      position: relative;
+      z-index: 0;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cover h1 {
+      font-size: 2.5em;
+      margin: 0.5em 0;
+    }
+
+    .cover h2 {
+      font-size: 1.5em;
+      color: #999;
+      margin-top: 0;
+    }
+
+    .trigger {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1004;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5em;
+      transition: transform 0.4s ease;
+    }
+
+    .trigger span {
+      display: inline-block;
+      width: 6px;
+      height: 32px;
+      margin-right: 6px;
+      background-color: black;
+      border-radius: 4px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100%;
+      background: #2c2c2c;
+      color: white;
+      padding: 2em 1.5em;
+      box-sizing: border-box;
+      transition: left 0.4s ease;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 1em 0;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: -400px;
+      width: 400px;
+      height: 100%;
+      background-color: #1a1a1a;
+      color: white;
+      overflow-y: auto;
+      transition: left 0.4s ease;
+      z-index: 999;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    .overlay.show {
+      left: 240px;
+    }
+
+    .overlay.hide {
+      left: -400px;
+    }
+
+    .overlay h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .overlay .section {
+      margin-bottom: 1em;
+    }
+
+    .overlay .section a {
+      display: block;
+      margin-left: 1em;
+      font-size: 0.95em;
+      color: white;
+      text-decoration: none;
+    }
+
+    .overlay .section a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .overlay strong {
+       display: block;
+     margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+     <!-- button --> 
+<button class="trigger" id="menuTrigger" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
+
+
+<!-- sidebar main menu -->
+<div class="sidebar" id="sidebar">
+  <a onclick="openOverlay('chapters')">章节选择</a>
+  <a onclick="openOverlay('about')">关于我们</a>
+</div>
+
+
+
+<!-- chapter choice -->
+<div class="overlay" id="overlay">
+  <div id="chapters" class="content hidden">
+    <h3>章节选择</h3>
+    <div class="section">
+      <strong onclick="toggleGroup('novel1')">母亲的情人</strong>
+      <div id="novel1" class="hidden">
+        <strong onclick="toggleGroup('novel1-1')">1-10章</strong>
+        <div id="novel1-1" class="hidden">
+          <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+        </div>
+        <strong onclick="toggleGroup('novel1-2')">11-20章</strong>
+        <div id="novel1-2" class="hidden">
+          <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a><a href="#">第14章</a><a href="#">第15章</a><a href="#">第16章</a><a href="#">第17章</a><a href="#">第18章</a><a href="#">第19章</a><a href="#">第20章</a>
+        </div>
+        <strong onclick="toggleGroup('novel1-3')">21-30章</strong>
+        <div id="novel1-3" class="hidden">
+          <a href="#">第21章</a><a href="#">第22章</a><a href="#">第23章</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <strong onclick="toggleGroup('novel2')">一个画家房客闯入我的农场生活</strong>
+      <div id="novel2" class="hidden">
+        <strong onclick="toggleGroup('novel2-1')">1-10章</strong>
+        <div id="novel2-1" class="hidden">
+          <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+        </div>
+        <strong onclick="toggleGroup('novel2-2')">11-20章</strong>
+        <div id="novel2-2" class="hidden">
+          <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a><a href="#">第14章</a><a href="#">第15章</a><a href="#">第16章</a><a href="#">第17章</a><a href="#">第18章</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <strong onclick="toggleGroup('novel3')">三人关系（施工中）</strong>
+      <div id="novel3" class="hidden">
+        <strong onclick="toggleGroup('novel3-1')">1-10章</strong>
+        <div id="novel3-1" class="hidden">
+          <a href="#">第1章</a><a href="#">第2章</a><a href="#">第3章</a><a href="#">第4章</a><a href="#">第5章</a><a href="#">第6章</a><a href="#">第7章</a><a href="#">第8章</a><a href="#">第9章</a><a href="#">第10章</a>
+        </div>
+        <strong onclick="toggleGroup('novel3-2')">11-20章</strong>
+        <div id="novel3-2" class="hidden">
+          <a href="#">第11章</a><a href="#">第12章</a><a href="#">第13章</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- about us -->
+  <div id="about" class="content hidden">
+    <h3>关于我们</h3>
+    <p>邮箱：<br>
+        <a href="mailto:archivexxoo@gmail.com" 
+        style="color: aqua;">
+        skinarchivexxoo@gmail.com
+    </a>
+
+    <p>源代码GitHub：<br>
+        <a href="https://github.com/Oliver-XXOObest/skinarchive" 
+        target="_blank"
+        style="color: aqua;">
+        https://github.com/Oliver-XXOObest/skinarchive
+    </a></a></p>
+
+    <p>Discord群组：<br>
+        <a href="https://discord.gg/ESmPzp4kyB"
+        target="_blank"
+        style="color: aqua;">
+        https://discord.gg/ESmPzp4kyB
+    </a></p>
+  </div>
+</div>
+
+
+
+<!-- cover content -->
+<div class="cover" id="cover">
+  <h1>皮肤-档案</h1>
+  <h2>SKINARCHIVE</h2>
+  <p>温暖的或者湿润的，阴暗的或者边缘的。</p>
+  <p>欢迎来到 SKINARCHIVE，这是一个以身体为核心的幻想写作站点。</p>
+</div>
+
+
+<!-- JS written by gpt -->
+<script>
+  let sidebarOpen = false;
+  let overlayOpen = false;
+
+  function toggleMenu() {
+    const overlay = document.getElementById("overlay");
+    if (overlayOpen) {
+      closeOverlay();
+    } else {
+      sidebarOpen = !sidebarOpen;
+      document.getElementById("sidebar").style.left = sidebarOpen ? "0" : "-260px";
+      document.getElementById("cover").style.transform = sidebarOpen ? "translateX(240px)" : "none";
+      document.getElementById("menuTrigger").style.transform = sidebarOpen ? "translateX(240px)" : "none";
+    }
+  }
+
+  function openOverlay(sectionId) {
+    const overlay = document.getElementById("overlay");
+    overlayOpen = true;
+    overlay.classList.remove("hide");
+    overlay.classList.add("show");
+    document.querySelectorAll(".overlay .content").forEach(div => div.classList.add("hidden"));
+    document.getElementById(sectionId).classList.remove("hidden");
+    document.getElementById("menuTrigger").style.transform = "translateX(640px)";
+  }
+
+  function closeOverlay() {
+    const overlay = document.getElementById("overlay");
+    overlayOpen = false;
+    overlay.classList.remove("show");
+    overlay.classList.add("hide");
+    document.getElementById("menuTrigger").style.transform = "translateX(240px)";
+  }
+
+  function toggleGroup(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
+
+</body>
+</html>
