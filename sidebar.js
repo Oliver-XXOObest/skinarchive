@@ -8,7 +8,7 @@ function toggleMenu() {
   } else {
     sidebarOpen = !sidebarOpen;
     document.getElementById("sidebar").style.left = sidebarOpen ? "0" : "-260px";
-    document.getElementById("cover")?.style.transform = sidebarOpen ? "translateX(240px)" : "none";
+    document.getElementById("cover").style.transform = sidebarOpen ? "translateX(240px)" : "none";
     document.getElementById("menuTrigger").style.transform = sidebarOpen ? "translateX(240px)" : "none";
   }
 }
