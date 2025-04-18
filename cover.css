@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: #ffead5;
+    font-family: serif;
+    overflow-x: hidden;
+    transition: transform 0.4s ease;
+  }
+  
+  .cover {
+    padding: 6em 3em;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  .cover h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+  }
+  
+  .cover h2 {
+    font-size: 1.5em;
+    color: #999;
+    margin-top: 0;
+  }
+  
