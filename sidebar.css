@@ -1,0 +1,120 @@
+.trigger {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 1004;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    transition: transform 0.4s ease;
+  }
+
+  .trigger span {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    margin-right: 6px;
+    background-color: black;
+    border-radius: 4px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100%;
+    background: #2c2c2c;
+    color: white;
+    padding: 2em 1.5em;
+    box-sizing: border-box;
+    transition: left 0.4s ease;
+    z-index: 1000;
+  }
+
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 1em 0;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+    z-index: 999;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+
+  .overlay.show {
+    left: 240px;
+  }
+
+  .overlay.hide {
+    left: -400px;
+  }
+
+  .overlay h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #ccc;
+  }
+
+  .overlay .section {
+    margin-bottom: 1em;
+  }
+
+  .overlay .section a {
+    display: block;
+    margin-left: 1em;
+    font-size: 0.95em;
+    color: white;
+    text-decoration: none;
+  }
+
+  .overlay .section a:hover {
+    text-decoration: underline;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .overlay strong {
+     display: block;
+   margin-top: 0.5em;
+  }
+</style>
+</head>
+<body>
+
+   <!-- button --> 
+<button class="trigger" id="menuTrigger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+
+
+<!-- sidebar main menu -->
+<div class="sidebar" id="sidebar">
+<a onclick="openOverlay('chapters')">章节选择</a>
+<a onclick="openOverlay('about')">关于我们</a>
+</div>
