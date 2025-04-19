@@ -4,36 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKINARCHIVE</title>
-  <link rel="stylesheet" href="sidebar.css">
+
+  <!-- style -->
   <link rel="stylesheet" href="cover.css">
-  <script src="sidebar.js" defer></script>
-
-
+  <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
-
-    <!-- cover content -->
+  <!-- cover content -->
   <div class="cover" id="cover">
     <h1>皮肤-档案</h1>
     <h2>SKINARCHIVE</h2>
     <p>温暖的或者湿润的，阴暗的或者边缘的。</p>
     <p>欢迎来到 SKINARCHIVE，这是一个以身体为核心的幻想写作站点。</p>
   </div>
-  
-  <!-- sidebar html -->
+
+  <!-- sidebar  -->
   <div id="sidebar-container"></div>
 
-
-
-  <!-- sidebar js -->
-  <script>
-    fetch("sidebar.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-      });
-  </script>
-
-  
+  <!-- js -->
+  <script src="sidebar.js"></script>
 </body>
 </html>
