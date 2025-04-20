@@ -121,7 +121,7 @@ const sidebarHTML = `
   <div id="about" class="content hidden">
     <h3>关于我们</h3>
     <p>邮箱：<br>
-      <a href="mailto:archivexxoo@gmail.com" style="color: aqua;">skinarchivexxoo@gmail.com</a></p>
+      <a href="mailto:skinarchivexxoo@gmail.com" style="color: aqua;">skinarchivexxoo@gmail.com</a></p>
     <p>源代码GitHub：<br>
       <a href="https://github.com/Oliver-XXOObest/skinarchive" target="_blank" style="color: aqua;">skinarchive GitHub</a></p>
     <p>Discord群组：<br>
