@@ -56,9 +56,11 @@ const sidebarHTML = `
 
         <strong onclick="toggleGroup('mt21_30')">后记</strong>
         <div id="mt21_30" class="hidden">
-          <a href="${prefix}mt21.html">后记1</a>
-          <a href="${prefix}mt22.html">后记2</a>
-          <a href="${prefix}mt23.html">后记3</a>
+          <a href="${prefix}mt21.html">后记1（高H）</a>
+          <a href="${prefix}mt22.html">后记2（高H）</a>
+          <a href="${prefix}mt23.html">后记3（高H）</a>
+          <a href="${prefix}mt24.html">IF 1</a>
+          <a href="${prefix}mt25.html">IF 2（微H）</a>
         </div>
 
       </div>
